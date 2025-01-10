@@ -8,10 +8,24 @@ const app = express();
 
 app.use(express.json());
 
+// app.use(
+//   cors({
+//     origin: CLIENT_URL,
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
     origin: CLIENT_URL,
     credentials: true,
+    allowedHeaders: [
+      "Origin",
+      "Content-Type",
+      "Accept",
+      "Authorization",
+      "X-Request-With",
+    ],
   })
 );
 
