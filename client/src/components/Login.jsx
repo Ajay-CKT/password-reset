@@ -12,7 +12,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await instance.post(`/auth/login`, {
+      const response = await instance.post(`/login`, {
         email,
         password,
       });

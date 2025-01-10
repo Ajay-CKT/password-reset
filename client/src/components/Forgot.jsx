@@ -9,7 +9,7 @@ const Forgot = () => {
   const handleLink = async (e) => {
     e.preventDefault();
     try {
-      const response = await instance.post("/auth/forgot", {
+      const response = await instance.post("/forgot", {
         email,
       });
       alert("Verification link sent");

@@ -11,7 +11,7 @@ const Register = () => {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      const response = await instance.post("/auth/register", { email, password });
+      const response = await instance.post("/register", { email, password });
       alert("Account created");
       console.info("Account created succusfully");
       setMessage(response.data.message);

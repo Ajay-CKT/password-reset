@@ -16,7 +16,7 @@ const Reset = () => {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      const response = await instance.post(`/auth/reset/${token}`, {
+      const response = await instance.post(`/reset/${token}`, {
         newPassword,
         confirmPassword,
       });
