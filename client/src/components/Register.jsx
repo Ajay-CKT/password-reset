@@ -18,7 +18,7 @@ const Register = () => {
       navigate("/login");
     } catch (error) {
       console.error("Error in creating account", error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
     }
   };
   return (

@@ -27,7 +27,7 @@ const Reset = () => {
       navigate("/login");
     } catch (error) {
       console.error("Error in changing the password", error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
     }
   };
   return (

@@ -17,7 +17,7 @@ const Forgot = () => {
       setMessage(response.data.message);
     } catch (error) {
       console.error("Error sending link", error);
-      setMessage(error.message);
+      setMessage(error.response.data.message);
     }
   };
   return (
